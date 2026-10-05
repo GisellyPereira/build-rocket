@@ -1,21 +1,47 @@
 {
   "name": "build-rocket",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "format": "prettier --write App.tsx src tests",
+    "format:check": "prettier --check App.tsx src tests"
   },
   "dependencies": {
-    "expo": "~49.0.10",
-    "expo-status-bar": "~1.6.0",
-    "react": "18.2.0",
-    "react-native": "0.72.4"
+    "@expo-google-fonts/space-grotesk": "^0.4.1",
+    "@expo-google-fonts/space-mono": "^0.4.2",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-three/fiber": "^9.8.1",
+    "@tanstack/react-query": "^5.104.1",
+    "expo": "~57.0.26",
+    "expo-asset": "~57.0.18",
+    "expo-file-system": "~57.0.7",
+    "expo-font": "~57.0.4",
+    "expo-gl": "~57.0.2",
+    "expo-haptics": "~57.0.3",
+    "expo-image": "~57.0.5",
+    "expo-linear-gradient": "~57.0.2",
+    "expo-splash-screen": "~57.0.9",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2",
+    "three": "^0.186.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
-  "private": true
+    "@types/react": "~19.2.4",
+    "@types/three": "^0.186.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  }
 }
